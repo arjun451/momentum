@@ -9,8 +9,8 @@ function saveTodo(){
 }
 function btnTodoListDeleteHandler(event){
     const li = event.target.parentElement
-    const todoValue = li.querySelector("span").innerText
-    const index = todoArray.findIndex(ele=>ele==todoValue)
+    const todoValue = li.querySelector("span").id
+    const index = todoArray.findIndex(ele=>ele.id==todoValue)
     todoArray.splice(index,1)
     saveTodo()
     li.remove()
@@ -22,7 +22,8 @@ function paintTodo(newTodo){
     const button = document.createElement("button")
     button.innerText = "✖️"
     button.addEventListener("click",btnTodoListDeleteHandler)
-    span.innerText = newTodo
+    span.innerText = newTodo.text
+    span.id = newTodo.id
     li.appendChild(span)
     li.appendChild(button)
     todoList.appendChild(li)
@@ -31,10 +32,14 @@ function paintTodo(newTodo){
 
 function handleTodoSubmit(event){
         event.preventDefault()
-      const todo = todoInput.value
+      const value = todoInput.value
         todoInput.value = ""
-        paintTodo(todo)
-        todoArray.push(todo)
+        const newToto = {
+            text:value,
+            id: Date.now()
+        }
+        paintTodo(newToto)
+        todoArray.push(newToto)
         saveTodo()
 }
 
