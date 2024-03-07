@@ -5,6 +5,4 @@ console.log(selectedImage)
 
 const bgImg = document.createElement('img')
 bgImg.src = `image/${selectedImage}`
-console.log(bgImg)
-
 document.body.appendChild(bgImg)
