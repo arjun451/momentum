@@ -6,28 +6,44 @@
     <link  rel="stylesheet" href="./styles/style.css"/>
     <title>Momentum</title>
 </head>
-<body>
-    <form id="login-form">
-        <input type="text" required maxlength="15" placeholder="what is your name!"/>
-      <input type="submit" placeholder="Log In">
-    </form>
-    
-    <h2 id="clock">00:00</h2>
-    <h1 class="hidden" id="greeting"></h1>
-    <div id="quote">
-                <span></span>
-                <span></span>
-    </div>
-    <form id="todo-form">
-<input type="text" required minlength="3" placeholder="Type your todo & press Enter"/>
-    </form>
-    <ul id="todo-list">
+<body >
 
-    </ul>
+  <div class="container">
+    <div class="login-forn-container">
+            <form id="login-form">
+                <input type="text" required maxlength="15" placeholder="what is your name!" />
+            </form>
+    </div>
+       
+        <div class="clock-container">
+        
+            <h2 id="clock">00:00</h2>
+        </div>
+        <div class="greeting-container">
+            <h1 class="hidden" id="greeting"></h1>
+        </div>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+       <div class="todo-form-container">
+        <form id="todo-form">
+            <input type="text" required minlength="3" placeholder="Type your todo & press Enter" />
+        </form>
+       </div>
+      <div class="todo-container">
+        <h3>Todo List</h3>
+        <ul id="todo-list">
+        
+        </ul>
+      </div>
+  </div>
     <script src="./js/clock.js"></script>
     <script src="./js/greeting.js"></script>
     <script src="./js/quets.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/todoList.js"></script>
+    <script src="./js/weather.js"></script>
+
 </body>
 </html>
