@@ -43,15 +43,14 @@
 .todo-container{
    position: relative;
    z-index: 3;
-   top: 30vh;
+   top: 0.5;
    left: 42vw;
    max-width: 12rem;
-    
    border-radius: .3rem;
    padding: .3rem;
    min-height: 2rem;
-   max-height: 14rem;
-   overflow-y: scroll;
+   max-height: 24rem;
+   
 }
 .login-forn-container{
 position: relative;
